@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E429D6062B34DB3F0048BF16 /* Admin&LabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429D6052B34DB3F0048BF16 /* Admin&LabViewController.swift */; };
+		E42B1FBC2B321AB0000F6370 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1FBB2B321AB0000F6370 /* Keys.swift */; };
 		E4DD5FEA2B284D9A00694A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DD5FE92B284D9A00694A69 /* AppDelegate.swift */; };
 		E4DD5FEC2B284D9A00694A69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DD5FEB2B284D9A00694A69 /* SceneDelegate.swift */; };
 		E4DD5FF12B284D9A00694A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4DD5FEF2B284D9A00694A69 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E429D6052B34DB3F0048BF16 /* Admin&LabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Admin&LabViewController.swift"; sourceTree = "<group>"; };
+		E42B1FBB2B321AB0000F6370 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		E4DD5FE62B284D9A00694A69 /* Mobile Programming Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Programming Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DD5FE92B284D9A00694A69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4DD5FEB2B284D9A00694A69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,8 +97,8 @@
 		E4DD5FFD2B28584700694A69 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E4DD600A2B285AD500694A69 /* RegistrationTableViewController.swift */,
 				E4DD60082B285A5400694A69 /* LoginTableViewController.swift */,
+				E4DD600A2B285AD500694A69 /* RegistrationTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -102,6 +106,7 @@
 		E4DD5FFE2B28585300694A69 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E429D6052B34DB3F0048BF16 /* Admin&LabViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 				E4DD600C2B285B8300694A69 /* AppData.swift */,
 				E4DD600E2B285BC100694A69 /* Alerts.swift */,
 				E4DD60102B285BF900694A69 /* Persistence.swift */,
+				E42B1FBB2B321AB0000F6370 /* Keys.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -119,9 +125,9 @@
 		E4DD60002B28586E00694A69 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E4DD60052B28595C00694A69 /* PatientUser.swift */,
 				E4DD60012B2858A400694A69 /* AdminUser.swift */,
 				E4DD60032B2858BC00694A69 /* LabUser.swift */,
-				E4DD60052B28595C00694A69 /* PatientUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DD60062B28595C00694A69 /* PatientUser.swift in Sources */,
+				E429D6062B34DB3F0048BF16 /* Admin&LabViewController.swift in Sources */,
+				E42B1FBC2B321AB0000F6370 /* Keys.swift in Sources */,
 				E4DD60042B2858BC00694A69 /* LabUser.swift in Sources */,
 				E4DD5FEA2B284D9A00694A69 /* AppDelegate.swift in Sources */,
 				E4DD600D2B285B8300694A69 /* AppData.swift in Sources */,

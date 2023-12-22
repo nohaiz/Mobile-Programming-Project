@@ -1,89 +1,55 @@
-//
-//  RegistrationTableViewController.swift
-//  Mobile Programming Project
-//
-//  Created by Nohaiz on 12/12/2023.
-//
-
 import UIKit
 
 class RegistrationTableViewController: UITableViewController {
-
+    
+    @IBOutlet weak var fullnameTextfield: UITextField!
+    @IBOutlet weak var cprTextfield: UITextField!
+    @IBOutlet weak var emailTextfield: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var confirmPasswordTextfield: UITextField!
+    @IBOutlet weak var saveBtn: UIButton!
+    
+    var user: PatientUser?
+    
+    var username: String = ""
+    var password: String = ""
+    var confirmPassword: String = ""
+    var name: String = ""
+    var cpr: String = ""
+    var gender: String = ""
+    var dob: Date = Date()
+    
+    init?(coder: NSCoder, user: PatientUser?) {
+        self.user = user
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        self.user = nil
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        updateSaveBtnState()
+    }
+    @IBAction func editingChanged(_ sender: Any) {
+        updateSaveBtnState()
+    }
+    
+    @IBAction func SavedBtn() {
+        /*user = PatientUser(username: username, password: password, name: name, cpr: cpr, gender: gender, DOB: dob)
+        print(user)*/
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    func updateSaveBtnState() {
+        name = fullnameTextfield.text ?? ""
+        cpr = cprTextfield.text ?? ""
+        username = emailTextfield.text ?? ""
+        password = passwordTextfield.text ?? ""
+        confirmPassword = confirmPasswordTextfield.text ?? ""
+        
+        saveBtn.isEnabled = !name.isEmpty && !cpr.isEmpty && !username.isEmpty && !password.isEmpty && !confirmPassword.isEmpty
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

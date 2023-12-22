@@ -1,89 +1,53 @@
 //
-//  LoginTableViewController.swift
+//  LoginTableViewCell.swift
 //  Mobile Programming Project
 //
-//  Created by Nohaiz on 12/12/2023.
+//  Created by Nohaiz on 14/12/2023.
 //
 
 import UIKit
 
 class LoginTableViewController: UITableViewController {
+    
+    @IBOutlet weak var usernameTextfield: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func configureAdminUsers(AdminUser: AdminUser) {
+        usernameTextfield.text = AdminUser.email
+        passwordTextfield.text = AdminUser.password
+    }
+    
+    func configureLabUsers(LabUser: LabUser) {
+        usernameTextfield.text = LabUser.email
+        passwordTextfield.text = LabUser.password
+    }
+    @IBAction func loginBtn(_ sender: UIButton) {
+        // Get the entered email and password from the text fields
+        guard let email = usernameTextfield.text, let password = passwordTextfield.text else {
+            return
+        }
+        
+        // Check if the entered email and password match any admin user in the AppData
+        if let matchedAdminUser = AppData.createSampleDataAdmin().first(where: { $0.email == email && $0.password == password }) {
+            performSegue(withIdentifier: "adminPage", sender: Any?.self)
+            print("Admin user logged in: \(matchedAdminUser.email)")
+            return // Exit the function after performing the segue
+        }
+        
+        // Check if the entered email and password match any lab user in the AppData
+        if let matchedLabUser = AppData.createSampleDataLab().first(where: { $0.email == email && $0.password == password }) {
+            performSegue(withIdentifier: "labPage", sender: Any?.self)
+            print("Lab user logged in: \(matchedLabUser.email)")
+            return // Exit the function after performing the segue
+        }
+        
+        // No match found, display the alert
+        displayIncorrectCredentialsAlert()
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
