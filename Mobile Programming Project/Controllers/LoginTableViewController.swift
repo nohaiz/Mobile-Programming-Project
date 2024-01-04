@@ -11,8 +11,11 @@ class LoginTableViewController: UITableViewController {
     
     @IBOutlet weak var usernameTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
-
+    
+    var patient = AppData.sampleDataPatient
+    
     override func viewDidLoad() {
+        AppData.load()
     }
     
     func configureAdminUsers(AdminUser: AdminUser) {
@@ -24,7 +27,13 @@ class LoginTableViewController: UITableViewController {
         usernameTextfield.text = LabUser.email
         passwordTextfield.text = LabUser.password
     }
+    func configurePatientUsers(PatientUsers: PatientUser) {
+        usernameTextfield.text = PatientUsers.email
+        passwordTextfield.text = PatientUsers.password
+    }
+    
     @IBAction func loginBtn(_ sender: UIButton) {
+
         // Get the entered email and password from the text fields
         guard let email = usernameTextfield.text, let password = passwordTextfield.text else {
             return
@@ -43,11 +52,21 @@ class LoginTableViewController: UITableViewController {
             print("Lab user logged in: \(matchedLabUser.email)")
             return // Exit the function after performing the segue
         }
+        // Check if the entered email and password match any lab user in the AppData
+        if let matchedPatientUser = AppData.sampleDataPatient.first(where: { $0.email == email && $0.password == password }) {
+            performSegue(withIdentifier: "patientPage", sender: Any?.self)
+            print("Patient user logged in: \(matchedPatientUser.email)")
+            return // Exit the function after performing the segue
+        }
         
         // No match found, display the alert
-        displayIncorrectCredentialsAlert()
+        if usernameTextfield.text?.isEmpty ?? true || passwordTextfield.text?.isEmpty ?? true {
+            
+            displayErrorIfEmpty()
+        }
+        else {
+            displayIncorrectCredentialsAlert()
+        }
     }
-
-
-    }
+}
 

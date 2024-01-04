@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LabUser{
+class LabUser: Encodable, Decodable{
     
     var email:String
     var password:String
