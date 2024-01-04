@@ -25,6 +25,12 @@
 		E4DD60132B285D1800694A69 /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4DD60122B285D1800694A69 /* Admin.storyboard */; };
 		E4DD60152B285D7200694A69 /* Lab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4DD60142B285D7200694A69 /* Lab.storyboard */; };
 		E4DD60172B285D8500694A69 /* Patient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4DD60162B285D8500694A69 /* Patient.storyboard */; };
+		F0280EC72B46D38C002238D3 /* BookingHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0280EC62B46D38C002238D3 /* BookingHistory.swift */; };
+		F0280ECB2B46D396002238D3 /* BookingHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0280EC82B46D395002238D3 /* BookingHistoryTableViewCell.swift */; };
+		F0280ECC2B46D396002238D3 /* BookingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0280ECA2B46D396002238D3 /* BookingTableViewController.swift */; };
+		F0280ECD2B46D396002238D3 /* BookingHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0280EC92B46D396002238D3 /* BookingHistoryViewController.swift */; };
+		F0280ECF2B46D508002238D3 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0280ECE2B46D508002238D3 /* Booking.storyboard */; };
+		F0280ED12B46D5B1002238D3 /* BookingHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0280ED02B46D5B1002238D3 /* BookingHistory.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,12 @@
 		E4DD60122B285D1800694A69 /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		E4DD60142B285D7200694A69 /* Lab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lab.storyboard; sourceTree = "<group>"; };
 		E4DD60162B285D8500694A69 /* Patient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patient.storyboard; sourceTree = "<group>"; };
+		F0280EC62B46D38C002238D3 /* BookingHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingHistory.swift; sourceTree = "<group>"; };
+		F0280EC82B46D395002238D3 /* BookingHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		F0280EC92B46D396002238D3 /* BookingHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingHistoryViewController.swift; sourceTree = "<group>"; };
+		F0280ECA2B46D396002238D3 /* BookingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTableViewController.swift; sourceTree = "<group>"; };
+		F0280ECE2B46D508002238D3 /* Booking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
+		F0280ED02B46D5B1002238D3 /* BookingHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookingHistory.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,9 @@
 		E4DD5FFD2B28584700694A69 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F0280EC82B46D395002238D3 /* BookingHistoryTableViewCell.swift */,
+				F0280EC92B46D396002238D3 /* BookingHistoryViewController.swift */,
+				F0280ECA2B46D396002238D3 /* BookingTableViewController.swift */,
 				E4DD60082B285A5400694A69 /* LoginTableViewController.swift */,
 				E4DD600A2B285AD500694A69 /* RegistrationTableViewController.swift */,
 			);
@@ -125,6 +140,7 @@
 		E4DD60002B28586E00694A69 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F0280EC62B46D38C002238D3 /* BookingHistory.swift */,
 				E4DD60052B28595C00694A69 /* PatientUser.swift */,
 				E4DD60012B2858A400694A69 /* AdminUser.swift */,
 				E4DD60032B2858BC00694A69 /* LabUser.swift */,
@@ -139,6 +155,8 @@
 				E4DD60122B285D1800694A69 /* Admin.storyboard */,
 				E4DD60142B285D7200694A69 /* Lab.storyboard */,
 				E4DD60162B285D8500694A69 /* Patient.storyboard */,
+				F0280ECE2B46D508002238D3 /* Booking.storyboard */,
+				F0280ED02B46D5B1002238D3 /* BookingHistory.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -201,8 +219,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0280ED12B46D5B1002238D3 /* BookingHistory.storyboard in Resources */,
 				E4DD60132B285D1800694A69 /* Admin.storyboard in Resources */,
 				E4DD5FF62B284D9B00694A69 /* LaunchScreen.storyboard in Resources */,
+				F0280ECF2B46D508002238D3 /* Booking.storyboard in Resources */,
 				E4DD5FF32B284D9B00694A69 /* Assets.xcassets in Resources */,
 				E4DD60152B285D7200694A69 /* Lab.storyboard in Resources */,
 				E4DD60172B285D8500694A69 /* Patient.storyboard in Resources */,
@@ -220,12 +240,16 @@
 				E4DD60062B28595C00694A69 /* PatientUser.swift in Sources */,
 				E429D6062B34DB3F0048BF16 /* Admin&LabViewController.swift in Sources */,
 				E42B1FBC2B321AB0000F6370 /* Keys.swift in Sources */,
+				F0280ECD2B46D396002238D3 /* BookingHistoryViewController.swift in Sources */,
+				F0280EC72B46D38C002238D3 /* BookingHistory.swift in Sources */,
 				E4DD60042B2858BC00694A69 /* LabUser.swift in Sources */,
 				E4DD5FEA2B284D9A00694A69 /* AppDelegate.swift in Sources */,
 				E4DD600D2B285B8300694A69 /* AppData.swift in Sources */,
 				E4DD5FEC2B284D9A00694A69 /* SceneDelegate.swift in Sources */,
 				E4DD60022B2858A400694A69 /* AdminUser.swift in Sources */,
+				F0280ECC2B46D396002238D3 /* BookingTableViewController.swift in Sources */,
 				E4DD60092B285A5400694A69 /* LoginTableViewController.swift in Sources */,
+				F0280ECB2B46D396002238D3 /* BookingHistoryTableViewCell.swift in Sources */,
 				E4DD600F2B285BC100694A69 /* Alerts.swift in Sources */,
 				E4DD600B2B285AD500694A69 /* RegistrationTableViewController.swift in Sources */,
 				E4DD60112B285BF900694A69 /* Persistence.swift in Sources */,
