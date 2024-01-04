@@ -7,22 +7,20 @@
 
 import Foundation
 
-class PatientUser{
+class PatientUser: Encodable, Decodable{
     
     var fullname:String
     var cpr:String
     var email:String
     var password:String
-    var confirmPassowrd:String
     var gender:String
-    var date:Date
+    var date:String
     
-    init(fullname: String, cpr: String, email: String, password: String, confirmPassowrd: String, gender: String, date: Date) {
+    init(fullname: String, cpr: String, email: String, password: String, gender: String, date: String) {
         self.fullname = fullname
         self.cpr = cpr
         self.email = email
         self.password = password
-        self.confirmPassowrd = confirmPassowrd
         self.gender = gender
         self.date = date
     }

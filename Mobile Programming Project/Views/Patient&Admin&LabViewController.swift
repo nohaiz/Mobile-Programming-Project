@@ -1,13 +1,13 @@
 //
-//  Admin&LabViewController.swift
+//  Patient&Admin&LabViewController.swift
 //  Mobile Programming Project
 //
-//  Created by NIggeroni Pepperoni on 21/12/2023.
+//  Created by Nohaiz on 12/12/2023.
 //
 
 import UIKit
 
-class Admin_LabViewController: UIViewController {
+class Patient_Admin_LabViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
