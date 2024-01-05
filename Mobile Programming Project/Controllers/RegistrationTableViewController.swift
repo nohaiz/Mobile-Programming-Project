@@ -32,17 +32,20 @@ class RegistrationTableViewController: UITableViewController {
         updateSaveBtnState()
         genderBtn.menu = genderItems()
         
+        // Set up the date picker
         let datepicker = UIDatePicker()
         datepicker.datePickerMode = .date
         datepicker.addTarget(self, action: #selector(dateChange(datePicker:)), for: .valueChanged)
         datepicker.frame.size = CGSize(width: 0, height: 300)
         datepicker.preferredDatePickerStyle = .wheels
         
+        // Set up the toolbar for the date picker
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
         toolbar.setItems([doneButton], animated: false)
         
+        // Set the input view and input accessory view for the date of birth text field
         DOBTextfield.inputAccessoryView = toolbar
         DOBTextfield.inputView = datepicker
         DOBTextfield.text = formatDate(date: Date())
@@ -87,7 +90,8 @@ class RegistrationTableViewController: UITableViewController {
     
     @IBAction func SavedBtn() {
         
-        if let _ = fullnameTextfield.text, fullnameTextfield.text?.rangeOfCharacter(from: CharacterSet.letters.inverted) == nil {
+        // Validate the input fields and save the data
+        if let fullName = fullnameTextfield.text, !fullName.isEmpty, fullName.rangeOfCharacter(from: CharacterSet.letters) != nil {
             
             if let _ = Int(cprTextfield.text ?? ""), cprTextfield.text?.count == 9 {
                 
@@ -106,9 +110,11 @@ class RegistrationTableViewController: UITableViewController {
                         displayDOBNotSelectedAlert()
                     }
                     else {
+                        // Create new patient object and save to sample data
                         let newPatient = PatientUser(fullname: name, cpr: cpr, email: username, password: password, gender: gender, date: dob)
                         AppData.sampleDataPatient.append(newPatient)
                         AppData.saveToFile()
+                        // Perform segue to login page
                         performSegue(withIdentifier: "loginPage", sender: Any?.self)
                     }
                 }

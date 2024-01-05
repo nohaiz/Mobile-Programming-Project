@@ -9,6 +9,7 @@ import Foundation
 
 class PatientUser: Encodable, Decodable{
     
+    // Define properties of the PatientUser class
     var fullname:String
     var cpr:String
     var email:String
@@ -16,6 +17,7 @@ class PatientUser: Encodable, Decodable{
     var gender:String
     var date:String
     
+    // Initialize the PatientUser object with the provided values
     init(fullname: String, cpr: String, email: String, password: String, gender: String, date: String) {
         self.fullname = fullname
         self.cpr = cpr

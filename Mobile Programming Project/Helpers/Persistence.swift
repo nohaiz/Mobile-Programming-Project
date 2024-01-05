@@ -8,20 +8,24 @@ import Foundation
 
 extension AppData {
     
+    // Enum to represent file names
     fileprivate enum FileName: String {
         case patientFile
     }
     
+    // Compute the URL for the archive file
     fileprivate static func archiveURL(fileName: FileName) -> URL {
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         return documentsURL.appendingPathComponent(fileName.rawValue).appendingPathExtension("plist")
     }
     
     
+    // Load data from the archive file
     static func load() {
         loadUsers()
     }
     
+    // Save data to the archive file
     static func saveToFile() {
         saveUsers()
     }
@@ -37,6 +41,7 @@ extension AppData {
             print("File path: \(url.path)")
         } catch {
             print("Error decoding data: \(error)")
+
         }
     }
     

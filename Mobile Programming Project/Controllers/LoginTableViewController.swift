@@ -16,17 +16,22 @@ class LoginTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         AppData.load()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: nil)
     }
     
+    // Configure the text fields with admin user details
     func configureAdminUsers(AdminUser: AdminUser) {
         usernameTextfield.text = AdminUser.email
         passwordTextfield.text = AdminUser.password
     }
     
+    // Configure the text fields with lab user details
     func configureLabUsers(LabUser: LabUser) {
         usernameTextfield.text = LabUser.email
         passwordTextfield.text = LabUser.password
     }
+    
+    // Configure the text fields with patient user details
     func configurePatientUsers(PatientUsers: PatientUser) {
         usernameTextfield.text = PatientUsers.email
         passwordTextfield.text = PatientUsers.password
@@ -40,14 +45,14 @@ class LoginTableViewController: UITableViewController {
         }
         
         // Check if the entered email and password match any admin user in the AppData
-        if let matchedAdminUser = AppData.createSampleDataAdmin().first(where: { $0.email == email && $0.password == password }) {
+        if let matchedAdminUser = AppData.sampleDataAdmin.first(where: { $0.email == email && $0.password == password }) {
             performSegue(withIdentifier: "adminPage", sender: Any?.self)
             print("Admin user logged in: \(matchedAdminUser.email)")
             return // Exit the function after performing the segue
         }
         
         // Check if the entered email and password match any lab user in the AppData
-        if let matchedLabUser = AppData.createSampleDataLab().first(where: { $0.email == email && $0.password == password }) {
+        if let matchedLabUser = AppData.sampleDataLab.first(where: { $0.email == email && $0.password == password }) {
             performSegue(withIdentifier: "labPage", sender: Any?.self)
             print("Lab user logged in: \(matchedLabUser.email)")
             return // Exit the function after performing the segue
