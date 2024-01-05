@@ -16,6 +16,7 @@ class LoginTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         AppData.load()
+        dismissKeyboard()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: nil)
     }
     
@@ -73,5 +74,12 @@ class LoginTableViewController: UITableViewController {
             displayIncorrectCredentialsAlert()
         }
     }
+    
+    func dismissKeyboard() {
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
 }
 
