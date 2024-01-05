@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41225F4E2B479E4700E285E7 /* patientHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41225F4D2B479E4700E285E7 /* patientHomePage.swift */; };
 		41225F502B479E6000E285E7 /* patientSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41225F4F2B479E6000E285E7 /* patientSettings.swift */; };
+		4194FDBC2B47E5E900FFE6AA /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194FDBB2B47E5E800FFE6AA /* functions.swift */; };
 		C7D2ED392B47CE330045B422 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D2ED382B47CE330045B422 /* Service.swift */; };
 		C7D2ED3B2B47CE4E0045B422 /* PackageAndTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D2ED3A2B47CE4E0045B422 /* PackageAndTest.swift */; };
 		C7D2ED3D2B47CF1C0045B422 /* AddTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D2ED3C2B47CF1C0045B422 /* AddTestTableViewController.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		41225F4D2B479E4700E285E7 /* patientHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientHomePage.swift; sourceTree = "<group>"; };
 		41225F4F2B479E6000E285E7 /* patientSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientSettings.swift; sourceTree = "<group>"; };
+		4194FDBB2B47E5E800FFE6AA /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		C7D2ED382B47CE330045B422 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		C7D2ED3A2B47CE4E0045B422 /* PackageAndTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageAndTest.swift; sourceTree = "<group>"; };
 		C7D2ED3C2B47CF1C0045B422 /* AddTestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTestTableViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				E4DD600E2B285BC100694A69 /* Alerts.swift */,
 				E4DD60102B285BF900694A69 /* Persistence.swift */,
 				E42B1FBB2B321AB0000F6370 /* Keys.swift */,
+				4194FDBB2B47E5E800FFE6AA /* functions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				E4DD5FEC2B284D9A00694A69 /* SceneDelegate.swift in Sources */,
 				C7D2ED3B2B47CE4E0045B422 /* PackageAndTest.swift in Sources */,
 				C7D2ED392B47CE330045B422 /* Service.swift in Sources */,
+				4194FDBC2B47E5E900FFE6AA /* functions.swift in Sources */,
 				E4DD60022B2858A400694A69 /* AdminUser.swift in Sources */,
 				F0280ECC2B46D396002238D3 /* BookingTableViewController.swift in Sources */,
 				E4DD60092B285A5400694A69 /* LoginTableViewController.swift in Sources */,

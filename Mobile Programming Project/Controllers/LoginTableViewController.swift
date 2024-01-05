@@ -60,7 +60,7 @@ class LoginTableViewController: UITableViewController {
         }
         // Check if the entered email and password match any lab user in the AppData
         if let matchedPatientUser = AppData.sampleDataPatient.first(where: { $0.email == email && $0.password == password }) {
-            performSegue(withIdentifier: "patientPage", sender: Any?.self)
+            goToStoryboard(storyboardName: "Patient", identifier: "patientNav")
             print("Patient user logged in: \(matchedPatientUser.email)")
             return // Exit the function after performing the segue
         }
