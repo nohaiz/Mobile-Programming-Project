@@ -8,6 +8,7 @@ import Foundation
 
 class AppData {
     static var services: [Service] = []
+    static var facilities = [Facility]()
 
         // An array of sample lab users
         static var sampleDataLab: [LabUser] = [
@@ -113,4 +114,24 @@ extension AppData{
         saveToFile()
     }
     
+    
+    //Facilities
+    static func deleteFacility(facility: Facility){
+        if let index = facilities.firstIndex(where: { $0.id == facility.id}){
+            facilities.remove(at: index)
+            saveToFile()
+        }
+    }
+    
+    static func addFacility(facility: Facility){
+        facilities.append(facility)
+        saveToFile()
+    }
+    
+    static func editFacility(facility: Facility){
+        if let index = facilities.firstIndex(where: { $0.id == facility.id}) {
+            facilities[index] = facility
+            saveToFile()
+        }
+    }
 }

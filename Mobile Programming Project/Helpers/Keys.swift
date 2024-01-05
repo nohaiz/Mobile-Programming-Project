@@ -14,12 +14,14 @@ enum SegueId: String {
     case addTest
     case unwindToServices
     case unwindToServiceForm
+    case unwindToFacilities
 }
 
 enum Cell: String {
     case ServiceCell
     case TestCell
     case ViewTestCell
+    case FacilityCell
 }
 
 enum ServiceType: Int{

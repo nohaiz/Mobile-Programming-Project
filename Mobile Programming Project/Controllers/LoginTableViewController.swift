@@ -47,14 +47,14 @@ class LoginTableViewController: UITableViewController {
         
         // Check if the entered email and password match any admin user in the AppData
         if let matchedAdminUser = AppData.sampleDataAdmin.first(where: { $0.email == email && $0.password == password }) {
-            performSegue(withIdentifier: "adminPage", sender: Any?.self)
+            goToStoryboard(storyboardName: "Admin", identifier: "adminNav")
             print("Admin user logged in: \(matchedAdminUser.email)")
             return // Exit the function after performing the segue
         }
         
         // Check if the entered email and password match any lab user in the AppData
         if let matchedLabUser = AppData.sampleDataLab.first(where: { $0.email == email && $0.password == password }) {
-            performSegue(withIdentifier: "labPage", sender: Any?.self)
+            goToStoryboard(storyboardName: "Lab", identifier: "labNav")
             print("Lab user logged in: \(matchedLabUser.email)")
             return // Exit the function after performing the segue
         }

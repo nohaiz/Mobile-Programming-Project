@@ -19,7 +19,14 @@ class ServiceTableViewController: UITableViewController, UISearchBarDelegate {
         tableView.tableHeaderView = stackView
         searchBar.delegate = self
         searchBar.placeholder = "Search services"
-        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Log out", style: .plain, target: self, action: #selector(logoutButtonTapped))
+    }
+    
+    @objc func logoutButtonTapped() {
+        goToStoryboard(storyboardName: "Main", identifier: "mainNav")
+
+        // Assuming you want to pop back to the previous storyboard
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

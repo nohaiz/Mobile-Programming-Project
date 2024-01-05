@@ -11,7 +11,7 @@
         <!--Service Navigation Controller-->
         <scene sceneID="v5V-yl-tfI">
             <objects>
-                <navigationController storyboardIdentifier="AdminMain" title="Service Navigation Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ayM-Dw-y22" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="labNav" title="Service Navigation Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ayM-Dw-y22" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="moE-lu-eMg">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

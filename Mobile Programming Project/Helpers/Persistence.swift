@@ -5,12 +5,13 @@
 //  Created by Nohaiz on 12/12/2023.
 //
 import Foundation
+import UIKit
 
 extension AppData {
     
     // Enum to represent file names
     fileprivate enum FileName: String {
-        case patientFile,tests,packages,services
+        case patientFile,tests,packages,services,facilities
     }
     
     // Compute the URL for the archive file
@@ -25,9 +26,14 @@ extension AppData {
         loadUsers()
         loadServices(fileName: .tests)
         loadServices(fileName: .packages)
+        loadFacilities()
         
         if services.isEmpty{
             services = sampleServices
+        }
+        
+        if facilities.isEmpty{
+            facilities = sampleFacilities
         }
     }
     
@@ -36,6 +42,7 @@ extension AppData {
         saveUsers()
         saveServices(fileName: .tests)
         saveServices(fileName: .packages)
+        saveFacilities()
     }
     
     fileprivate static func loadUsers() {
@@ -49,7 +56,7 @@ extension AppData {
             print("File path: \(url.path)")
         } catch {
             print("Error decoding data: \(error)")
-
+            
         }
     }
     
@@ -103,9 +110,36 @@ extension AppData {
         } catch {
             print("Error decoding data: \(error)")
         }
-    
-    
+        
     }
+    
+    
+    //Facility functions
+    fileprivate static func saveFacilities(){
+        guard facilities.count > 0 else {return}
+        
+        let encoder = PropertyListEncoder()
+        do{
+            let encodedFacilities = try encoder.encode(facilities)
+            try encodedFacilities.write(to: archiveURL(fileName: .facilities))
+        } catch {
+            print("Error encoding data: \(error)")
+        }
+    }
+    
+    fileprivate static func loadFacilities() {
+        let url = archiveURL(fileName: .facilities)
+        guard let data = try? Data(contentsOf: url) else { return }
+        do {
+            let decoder = PropertyListDecoder()
+            var decodedFacilities : [Facility] = []
+            decodedFacilities = try decoder.decode([Facility].self, from: data)
+            facilities.append(contentsOf: decodedFacilities)
+        } catch {
+            print("Error decoding data: \(error)")
+        }
+    }
+    
 }
 
 let completeBloodCount = Test(name: "Complete Blood Count", price: 30.0, description: "Measures different components of the blood.", isFastingRequired: false)
@@ -177,3 +211,28 @@ let package7 = Package(
     includedTests: [lungFunctionTest, vitaminDTest])
 
 private var sampleServices: [Service] = [package1,vitaminDTest,package2,completeBloodCount,cholesterolTest,liverFunctionTest,package3,package4,kidneyFunctionTest,package5,vitaminATest,boneDensityTest,ironLevelsTest,allergyScreening,package6,package7]
+
+
+private var sampleFacilities: [Facility] = [
+    // Hospitals
+    Facility(facilityType: .hospital, logo: UIImage(named: "RBHLogo")!, name: "Royal Bahrain Hospital", contactNumber: "17764444", location: "Road 515, Riffa", isAvailable: false, isAlwaysOpen: false, startTime: Calendar.current.date(bySettingHour: 8, minute: 0, second: 0, of: Date())!, endTime: Calendar.current.date(bySettingHour: 17, minute: 0, second: 0, of: Date())!, username: "RBHUser", password: "password777"),
+    
+    Facility(facilityType: .hospital, logo: UIImage(named: "MOHLogo")!, name: "Salmaniya Medical Complex", contactNumber: "17822222", location: "Road 2435, Salmaniya, Manama", isAvailable: false, isAlwaysOpen: false, startTime: Calendar.current.date(bySettingHour: 7, minute: 0, second: 0, of: Date())!, endTime: Calendar.current.date(bySettingHour: 18, minute: 0, second: 0, of: Date())!, username: "SalmaniyaUser", password: "password123"),
+    
+    Facility(facilityType: .hospital, logo: UIImage(named: "KHUHLogo")!, name: "King Hamad University Hospital", contactNumber: "17444244", location: "Road 2831, Busaiteen, Muharraq", isAvailable: false, isAlwaysOpen: false, startTime: Calendar.current.date(bySettingHour: 8, minute: 0, second: 0, of: Date())!, endTime: Calendar.current.date(bySettingHour: 17, minute: 0, second: 0, of: Date())!, username: "KHUHUser", password: "password456"),
+    
+    Facility(facilityType: .hospital, logo: UIImage(named: "BSHLogo")!, name: "Bahrain Specialist Hospital", contactNumber: "17812000", location: "Road 44, Juffair, Manama", isAvailable: false, isAlwaysOpen: false, startTime: Calendar.current.date(bySettingHour: 7, minute: 30, second: 0, of: Date())!, endTime: Calendar.current.date(bySettingHour: 16, minute: 30, second: 0, of: Date())!, username: "BSHUser", password: "password789"),
+    
+    Facility(facilityType: .hospital, logo: UIImage(named: "AMHLogo")!, name: "American Mission Hospital", contactNumber: "17253444", location: "Road 245, Manama", isAvailable: false, isAlwaysOpen: false, startTime: Calendar.current.date(bySettingHour: 8, minute: 0, second: 0, of: Date())!, endTime: Calendar.current.date(bySettingHour: 17, minute: 0, second: 0, of: Date())!, username: "AMHUser", password: "password111"),
+    
+    // labs
+    Facility(facilityType: .lab, logo: UIImage(named: "ABMLLogo")!, name: "Al Borg Medical Laboratories", contactNumber: "17215555", location: "Manama", isAvailable: true, isAlwaysOpen: false, startTime: Calendar.current.date(bySettingHour: 8, minute: 0, second: 0, of: Date())!, endTime: Calendar.current.date(bySettingHour: 18, minute: 0, second: 0, of: Date())!, username: "AlBorgUser", password: "pass"),
+
+    Facility(facilityType: .lab, logo: UIImage(named: "ALSLogo")!, name: "ALS Laboratory Group", contactNumber: "17272727", location: "Seef, Manama", isAvailable: true, isAlwaysOpen: true, startTime: Date(), endTime: Date(), username: "ALSLabUser", password: "pass"),
+    
+    Facility(facilityType: .lab, logo: UIImage(named: "BMLLogo")!, name: "Bahrain Medical Laboratory", contactNumber: "17234567", location: "Gudaibiya, Manama", isAvailable: false, isAlwaysOpen: false, startTime: Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!, endTime: Calendar.current.date(bySettingHour: 17, minute: 0, second: 0, of: Date())!, username: "BMLUser", password: "pass"),
+    
+    Facility(facilityType: .lab, logo: UIImage(named: "HPLogo")!, name: "Healthpoint Laboratory", contactNumber: "17766666", location: "Tubli, Manama", isAvailable: true, isAlwaysOpen: true, startTime: Date(), endTime: Date(), username: "HealthpointUser", password: "pass"),
+    
+    Facility(facilityType: .lab, logo: UIImage(named: "RBHLogo")!, name: "Royal Bahrain Hospital Laboratory", contactNumber: "17711111", location: "Riffa, Manama", isAvailable: true, isAlwaysOpen: false, startTime: Calendar.current.date(bySettingHour: 8, minute: 0, second: 0, of: Date())!, endTime: Calendar.current.date(bySettingHour: 17, minute: 0, second: 0, of: Date())!, username: "RBHUser", password: "pass")
+    ]

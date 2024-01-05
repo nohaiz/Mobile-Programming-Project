@@ -163,5 +163,28 @@ extension UIViewController{
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
+    
+    
+    func confirmation(title: String,message: String?,confirmHandler: @escaping () -> Void){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "Yes", style: .default) { UIAlertAction in
+            confirmHandler()
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(confirm)
+        alert.addAction(cancel)
+        present(alert, animated: true)
+    }
+    
+    func discardConfirmation(title: String,message: String?,confirmHandler: @escaping () -> Void){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "Discard", style: .destructive) { UIAlertAction in
+            confirmHandler()
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(confirm)
+        alert.addAction(cancel)
+        present(alert, animated: true)
+    }
 }
 
