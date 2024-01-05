@@ -30,6 +30,7 @@ class RegistrationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateSaveBtnState()
+        dismissKeyboard()
         genderBtn.menu = genderItems()
         
         // Set up the date picker
@@ -141,5 +142,10 @@ class RegistrationTableViewController: UITableViewController {
 
         saveBtn.isEnabled = !name.isEmpty && !cpr.isEmpty && !username.isEmpty && !password.isEmpty && !confirmPassword.isEmpty
         
+    }
+    func dismissKeyboard() {
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
 }
