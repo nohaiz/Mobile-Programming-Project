@@ -21,13 +21,13 @@ class patientHomePage: UIViewController{
     
 }
 
-extension ViewController: UITableViewDelegate {
+extension patientHomePage: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension patientHomePage: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20

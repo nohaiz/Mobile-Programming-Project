@@ -7,6 +7,7 @@
 import Foundation
 
 class AppData {
+    static var services: [Service] = []
 
         // An array of sample lab users
         static var sampleDataLab: [LabUser] = [
@@ -51,4 +52,65 @@ class AppData {
         PatientUser(fullname: "Bat Man", cpr: "543109876", email: "batman@gmail.com", password: "gjvntekt", gender: "Male", date: "December 01 2023"),
 
         ]
+}
+
+extension AppData{
+    
+    //Service modification
+    static func deleteService(service: Service){
+        if let index = services.firstIndex(where: { $0.id == service.id}){
+            
+            //If the service is a test, it will be deleted from all packages
+            if service is Test
+            {
+                for otherService in services
+                {
+                    if let package = otherService as? Package
+                    {
+                        if let testIndex = package.includedTests.firstIndex(where: { $0.id == service.id }) {
+                            package.includedTests.remove(at: testIndex)
+                        }
+                    }
+                }
+            }
+                    
+            
+            services.remove(at: index)
+            saveToFile()
+        }
+    }
+
+    static func addService(service: Service){
+        services.append(service)
+        saveToFile()
+    }
+
+    static func editService(service: Service){
+        if let index = services.firstIndex(where: { $0.id == service.id}) {
+           
+            //If the service is a test, it will be deleted from all packages
+            if service is Test
+            {
+                for otherService in services
+                {
+                    if let package = otherService as? Package
+                    {
+                        if let testIndex = package.includedTests.firstIndex(where: { $0.id == service.id }) {
+                            package.includedTests[testIndex] = service as! Test
+                        }
+                    }
+                }
+            }
+            services[index] = service
+            saveToFile()
+        }
+    }
+        
+    static func addTestInPackage(test: Service, package: Service) {
+        if let sTest = test as? Test, let sPackage = package as? Package{
+            sPackage.includedTests.append(sTest)
+        }
+        saveToFile()
+    }
+    
 }

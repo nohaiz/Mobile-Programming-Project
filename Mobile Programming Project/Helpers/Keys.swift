@@ -10,4 +10,19 @@ import Foundation
 enum SegueId: String {
     case loginPage
     case adminPage
+    case viewTest
+    case addTest
+    case unwindToServices
+    case unwindToServiceForm
+}
+
+enum Cell: String {
+    case ServiceCell
+    case TestCell
+    case ViewTestCell
+}
+
+enum ServiceType: Int{
+    case Package = 0
+    case Test = 1
 }

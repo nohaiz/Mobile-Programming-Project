@@ -119,5 +119,49 @@ func displayGenderNotSelectedAlert() {
     }
 }
 
-
+//Services alerts
+extension UIViewController{
+    
+    func confirmAction(title: String,message: String?,confirmHandler: @escaping () -> Void){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "Yes", style: .default) { UIAlertAction in
+            confirmHandler()
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(confirm)
+        alert.addAction(cancel)
+        present(alert, animated: true)
+    }
+    
+    func discardAlert(title: String,message: String?,confirmHandler: @escaping () -> Void){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "Discard", style: .destructive) { UIAlertAction in
+            confirmHandler()
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(confirm)
+        alert.addAction(cancel)
+        present(alert, animated: true)
+    }
+    
+    func deleteAlert(title: String,message: String?,confirmHandler: @escaping () -> Void){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "Delete", style: .destructive) { UIAlertAction in
+            confirmHandler()
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(confirm)
+        alert.addAction(cancel)
+        present(alert, animated: true)
+    }
+    
+    func selectTestAlert() {
+        let alert = UIAlertController(title: "Select a Test", message: "Please select a test before saving the package.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+}
 
