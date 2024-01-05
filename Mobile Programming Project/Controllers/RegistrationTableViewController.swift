@@ -72,12 +72,14 @@ class RegistrationTableViewController: UITableViewController {
 
     
     func genderItems() -> UIMenu {
-        let maleAction = UIAction(title: "Male", handler: { (_) in
-            self.gender = "Male"
+        let maleAction = UIAction(title: "Male", handler: { [weak self] (_) in
+            self?.gender = "Male"
+            self?.genderBtn.setTitle("Male", for: .normal)
         })
         
-        let femaleAction = UIAction(title: "Female", handler: { (_) in
-            self.gender = "Female"
+        let femaleAction = UIAction(title: "Female", handler: { [weak self] (_) in
+            self?.gender = "Female"
+            self?.genderBtn.setTitle("Female", for: .normal)
         })
         
         let genderMenu = UIMenu(title: "", children: [maleAction, femaleAction])
