@@ -1,5 +1,5 @@
 # Mobile-Programming-Project
- /*
+ 
 Nohaiz Sh 202000544 (Changes made)
 -The login button is not rounded as an oval shape in the final demo for the login page.
 -The registration page has a back button instead of a login button on the top left of the page.
@@ -11,4 +11,3 @@ Nohaiz Sh 202000544 (Changes made)
 Features:
 Login Page (Nohaiz Sh) Setup: Need to have existing login
 Patient Registration Page (Nohaiz Sh) Setup: none
-*/
