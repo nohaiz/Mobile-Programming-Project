@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41225F4E2B479E4700E285E7 /* patientHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41225F4D2B479E4700E285E7 /* patientHomePage.swift */; };
+		41225F502B479E6000E285E7 /* patientSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41225F4F2B479E6000E285E7 /* patientSettings.swift */; };
 		E429D6062B34DB3F0048BF16 /* Patient&Admin&LabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429D6052B34DB3F0048BF16 /* Patient&Admin&LabViewController.swift */; };
 		E42B1FBC2B321AB0000F6370 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1FBB2B321AB0000F6370 /* Keys.swift */; };
 		E4DD5FEA2B284D9A00694A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DD5FE92B284D9A00694A69 /* AppDelegate.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41225F4D2B479E4700E285E7 /* patientHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientHomePage.swift; sourceTree = "<group>"; };
+		41225F4F2B479E6000E285E7 /* patientSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientSettings.swift; sourceTree = "<group>"; };
 		E429D6052B34DB3F0048BF16 /* Patient&Admin&LabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Patient&Admin&LabViewController.swift"; sourceTree = "<group>"; };
 		E42B1FBB2B321AB0000F6370 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		E4DD5FE62B284D9A00694A69 /* Mobile Programming Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Programming Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +118,8 @@
 				F0280ECA2B46D396002238D3 /* BookingTableViewController.swift */,
 				E4DD60082B285A5400694A69 /* LoginTableViewController.swift */,
 				E4DD600A2B285AD500694A69 /* RegistrationTableViewController.swift */,
+				41225F4D2B479E4700E285E7 /* patientHomePage.swift */,
+				41225F4F2B479E6000E285E7 /* patientSettings.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 				E4DD60042B2858BC00694A69 /* LabUser.swift in Sources */,
 				E4DD5FEA2B284D9A00694A69 /* AppDelegate.swift in Sources */,
 				E4DD600D2B285B8300694A69 /* AppData.swift in Sources */,
+				41225F502B479E6000E285E7 /* patientSettings.swift in Sources */,
 				E4DD5FEC2B284D9A00694A69 /* SceneDelegate.swift in Sources */,
 				E4DD60022B2858A400694A69 /* AdminUser.swift in Sources */,
 				F0280ECC2B46D396002238D3 /* BookingTableViewController.swift in Sources */,
@@ -252,6 +259,7 @@
 				F0280ECB2B46D396002238D3 /* BookingHistoryTableViewCell.swift in Sources */,
 				E4DD600F2B285BC100694A69 /* Alerts.swift in Sources */,
 				E4DD600B2B285AD500694A69 /* RegistrationTableViewController.swift in Sources */,
+				41225F4E2B479E4700E285E7 /* patientHomePage.swift in Sources */,
 				E4DD60112B285BF900694A69 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +412,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MHT88YR8BP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mobile Programming Project/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bahrain Medical Healthcare Finder";
@@ -432,6 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MHT88YR8BP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mobile Programming Project/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bahrain Medical Healthcare Finder";
