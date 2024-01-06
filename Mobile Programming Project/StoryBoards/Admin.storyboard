@@ -502,7 +502,7 @@
                         </sections>
                     </tableView>
                     <navigationItem key="navigationItem" id="86Q-Zp-Nom">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="Tmz-Np-hnM" userLabel="saveBtn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Tmz-Np-hnM" userLabel="saveBtn">
                             <connections>
                                 <action selector="saveButtonClicked:" destination="ngr-eq-ttT" id="XF8-69-6dj"/>
                             </connections>
