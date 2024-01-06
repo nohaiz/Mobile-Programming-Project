@@ -88,3 +88,22 @@ Password : vndosjt9<br>
 <b>No Set-up Needed</b>
 
 <hr>
+
+<h3>Danial Al-Ajmi - 202101417</h3>
+<h4>Features:</h4>
+<ol>
+<li>Booking History.</li>
+<li>Add/Cancel Booking.</li>
+</ol>
+<h4>Changes:</h4>
+<ul>
+<li>Added segment control in Booking History</li>
+<li> Added DatePicker for Booking Date.</li>
+<li>Added additional sections in Booking Page.</li>
+</ul>
+<br>
+
+<br>
+<b>No Set-up Needed</b>
+
+<hr>
