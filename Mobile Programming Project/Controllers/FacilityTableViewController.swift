@@ -1,6 +1,6 @@
 //
 //  FacilityTableViewController.swift
-//  Mobile Programming Project
+//  Facilitiess
 //
 //  Created by Mohamed Hasan Alaam on 27/12/2023.
 //
@@ -19,16 +19,16 @@ class FacilityTableViewController: UITableViewController, UISearchBarDelegate{
         tableView.tableHeaderView = stackView
         searchBar.delegate = self
         searchBar.placeholder = "Search facilities"
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Log out", style: .plain, target: self, action: #selector(logoutButtonTapped))
-    }
-    
-    @objc func logoutButtonTapped() {
-        goToStoryboard(storyboardName: "Main", identifier: "mainNav")
+    self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Log out", style: .plain, target: self, action: #selector(logoutButtonTapped))
+}
 
-        // Assuming you want to pop back to the previous storyboard
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+@objc func logoutButtonTapped() {
+    goToStoryboard(storyboardName: "Main", identifier: "mainNav")
+
+    // Assuming you want to pop back to the previous storyboard
+    self.navigationController?.popViewController(animated: true)
+}
+  
     func filterFacilities() {
         let selectedIndex = segmentedControl.selectedSegmentIndex
         
