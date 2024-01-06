@@ -15,7 +15,9 @@
 <li>Login Page</li>
 <li>Patient Registration Page</li>
 </ol>
-<b> Setup: Need to have existing login.</b>
+<b>Setup</b>
+<br>
+Need to have existing login credentials. 
 
 <hr></hr>
 
