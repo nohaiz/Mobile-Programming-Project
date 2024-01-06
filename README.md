@@ -35,7 +35,33 @@ Need to have existing login credentials if not create a new patient.
 <li>Increased text fields to match the user classes</li>
 </ul>
 <br>
+<ul>
+ <li><b>Email:</b> janesmith@hotmail.com</li>
+ <li><b>Password:</b> fhtidnj3</li>
+</ul>
 <br>
 <b>No Steup Needed</b>
+
+<hr>
+<h3>Hadi Jaffer - 202102145</h3>
+<h4>Features:</h4>
+<ol>
+<li>Add/Edit Packages and tests.</li>
+<li>View/Delete Packages and tests.</li>
+</ol>
+<h4>Changes:</h4>
+<ul>
+<li>Implemented deleting tests from a packages.</li>
+<li>Editing or deleting a test will also make the same change in all packages where it's included.</li>
+<li>Save button in the form will be greyed out if the three textboxes are empty or if the price is not a number.</li>
+<li>Added variables to store initial values and a function to check if any data was changed, alerts for saving and discarding changes will appear accordingly.</li>
+<li>Added a "Select test" alert which will appear when trying to save a package with no tests included.</li>
+</ul>
+<br>
+Lab user credentials:<br>
+Email : labuser1@gmail.com<br>
+Password : gnskeqn1<br>
+<br>
+<b>No Set-up Needed</b>
 
 <hr>
