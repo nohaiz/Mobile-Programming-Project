@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PatientUser: Encodable, Decodable{
+class PatientUser: User, Encodable, Decodable{
     
     // Define properties of the PatientUser class
     var fullname:String
@@ -25,6 +25,10 @@ class PatientUser: Encodable, Decodable{
         self.password = password
         self.gender = gender
         self.date = date
+        super.init()
+        
     }
+    
+    
 }
 

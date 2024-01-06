@@ -18,8 +18,11 @@ extension UIViewController {
 struct CommonMethods {
     static func goToStoryboard(storyboardName: String, identifier: String) {
         let root = UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: identifier)
+
         let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
         sceneDelegate.window?.rootViewController = root
         
     }
+    
+    
 }

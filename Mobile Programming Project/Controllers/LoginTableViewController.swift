@@ -39,7 +39,7 @@ class LoginTableViewController: UITableViewController {
     }
     
     @IBAction func loginBtn(_ sender: UIButton) {
-
+        
         // Get the entered email and password from the text fields
         guard let email = usernameTextfield.text, let password = passwordTextfield.text else {
             return
@@ -54,15 +54,15 @@ class LoginTableViewController: UITableViewController {
         
         // Check if the entered email and password match any lab user in the AppData
         if let matchedLabUser = AppData.sampleDataLab.first(where: { $0.email == email && $0.password == password }) {
-            performSegue(withIdentifier: "labPage", sender: Any?.self)
+            goToStoryboard(storyboardName: "Lab", identifier: "labNav")
             print("Lab user logged in: \(matchedLabUser.email)")
             return // Exit the function after performing the segue
         }
         // Check if the entered email and password match any lab user in the AppData
         if let matchedPatientUser = AppData.sampleDataPatient.first(where: { $0.email == email && $0.password == password }) {
-            goToStoryboard(storyboardName: "Patient", identifier: "patientNav")
-            print("Patient user logged in: \(matchedPatientUser.email)")
-            return // Exit the function after performing the segue
+           performSegue(withIdentifier: "segueRef", sender: Any?.self)
+           print("Patient user logged in: \(matchedPatientUser.email)")
+           return // Exit the function after performing the segue
         }
         
         // No match found, display the alert
@@ -75,11 +75,29 @@ class LoginTableViewController: UITableViewController {
         }
     }
     
-    func dismissKeyboard() {
-        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:)))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if segue.identifier == "unwindToTabBarController" {
+           let tabBarController = segue.destination as! UITabBarController
+           // You can access your HomePage here if needed
+           // let homePage = tabBarController.viewControllers?.first as! HomePage
+       }
     }
 
-}
+    
+    func performPatientSegue(user: PatientUser) {
+        let storyboard = UIStoryboard(name: "Patient", bundle: nil)
+        if let patientVC = storyboard.instantiateViewController(withIdentifier: "patientHome") as? patientHomePage {
+            patientVC.user = user
+            self.present(patientVC, animated: true, completion: nil)
+        }
+    }
+
+        func dismissKeyboard() {
+            let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:)))
+            tap.cancelsTouchesInView = false
+            view.addGestureRecognizer(tap)
+        }
+        
+    }
+    
 

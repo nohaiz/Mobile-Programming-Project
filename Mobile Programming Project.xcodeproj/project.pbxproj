@@ -10,6 +10,7 @@
 		41225F4E2B479E4700E285E7 /* patientHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41225F4D2B479E4700E285E7 /* patientHomePage.swift */; };
 		41225F502B479E6000E285E7 /* patientSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41225F4F2B479E6000E285E7 /* patientSettings.swift */; };
 		4194FDBC2B47E5E900FFE6AA /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194FDBB2B47E5E800FFE6AA /* functions.swift */; };
+		4194FDBE2B4853FB00FFE6AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194FDBD2B4853FB00FFE6AA /* User.swift */; };
 		C7D2ED392B47CE330045B422 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D2ED382B47CE330045B422 /* Service.swift */; };
 		C7D2ED3B2B47CE4E0045B422 /* PackageAndTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D2ED3A2B47CE4E0045B422 /* PackageAndTest.swift */; };
 		C7D2ED3D2B47CF1C0045B422 /* AddTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D2ED3C2B47CF1C0045B422 /* AddTestTableViewController.swift */; };
@@ -40,13 +41,13 @@
 		F0280ECC2B46D396002238D3 /* BookingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0280ECA2B46D396002238D3 /* BookingTableViewController.swift */; };
 		F0280ECD2B46D396002238D3 /* BookingHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0280EC92B46D396002238D3 /* BookingHistoryViewController.swift */; };
 		F0280ECF2B46D508002238D3 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0280ECE2B46D508002238D3 /* Booking.storyboard */; };
-		F0280ED12B46D5B1002238D3 /* BookingHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0280ED02B46D5B1002238D3 /* BookingHistory.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		41225F4D2B479E4700E285E7 /* patientHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientHomePage.swift; sourceTree = "<group>"; };
 		41225F4F2B479E6000E285E7 /* patientSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientSettings.swift; sourceTree = "<group>"; };
 		4194FDBB2B47E5E800FFE6AA /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
+		4194FDBD2B4853FB00FFE6AA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C7D2ED382B47CE330045B422 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		C7D2ED3A2B47CE4E0045B422 /* PackageAndTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageAndTest.swift; sourceTree = "<group>"; };
 		C7D2ED3C2B47CF1C0045B422 /* AddTestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTestTableViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		F0280EC92B46D396002238D3 /* BookingHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingHistoryViewController.swift; sourceTree = "<group>"; };
 		F0280ECA2B46D396002238D3 /* BookingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTableViewController.swift; sourceTree = "<group>"; };
 		F0280ECE2B46D508002238D3 /* Booking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
-		F0280ED02B46D5B1002238D3 /* BookingHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookingHistory.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +174,7 @@
 				E4DD60032B2858BC00694A69 /* LabUser.swift */,
 				C7D2ED382B47CE330045B422 /* Service.swift */,
 				C7D2ED3A2B47CE4E0045B422 /* PackageAndTest.swift */,
+				4194FDBD2B4853FB00FFE6AA /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,7 +187,6 @@
 				E4DD60142B285D7200694A69 /* Lab.storyboard */,
 				E4DD60162B285D8500694A69 /* Patient.storyboard */,
 				F0280ECE2B46D508002238D3 /* Booking.storyboard */,
-				F0280ED02B46D5B1002238D3 /* BookingHistory.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -249,7 +249,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0280ED12B46D5B1002238D3 /* BookingHistory.storyboard in Resources */,
 				E4DD60132B285D1800694A69 /* Admin.storyboard in Resources */,
 				E4DD5FF62B284D9B00694A69 /* LaunchScreen.storyboard in Resources */,
 				F0280ECF2B46D508002238D3 /* Booking.storyboard in Resources */,
@@ -272,6 +271,7 @@
 				C7D2ED452B47D21A0045B422 /* ServiceTableViewCell.swift in Sources */,
 				C7D2ED432B47CF790045B422 /* ViewTestsTableViewController.swift in Sources */,
 				C7D2ED3D2B47CF1C0045B422 /* AddTestTableViewController.swift in Sources */,
+				4194FDBE2B4853FB00FFE6AA /* User.swift in Sources */,
 				E42B1FBC2B321AB0000F6370 /* Keys.swift in Sources */,
 				F0280ECD2B46D396002238D3 /* BookingHistoryViewController.swift in Sources */,
 				F0280EC72B46D38C002238D3 /* BookingHistory.swift in Sources */,
@@ -449,7 +449,7 @@
 				INFOPLIST_FILE = "Mobile Programming Project/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bahrain Medical Healthcare Finder";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = BookingHistory.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -479,7 +479,7 @@
 				INFOPLIST_FILE = "Mobile Programming Project/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bahrain Medical Healthcare Finder";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = BookingHistory.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

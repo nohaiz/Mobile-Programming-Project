@@ -50,9 +50,15 @@ class AppData {
         PatientUser(fullname: "Emily Davis", cpr: "012456789", email: "emilydavis@hotmail.com", password: "gnjfdji0", gender: "Female", date: "April 3 2005"),
         
         PatientUser(fullname: "Bat Man", cpr: "543109876", email: "batman@gmail.com", password: "gjvntekt", gender: "Male", date: "December 01 2023"),
+        
+        PatientUser(fullname: "Bat Man", cpr: "543109876", email: "123", password: "123", gender: "Male", date: "December 01 2023"),
 
         ]
+    
+    
 }
+
+
 
 extension AppData{
     
@@ -111,6 +117,45 @@ extension AppData{
             sPackage.includedTests.append(sTest)
         }
         saveToFile()
+    }
+    
+    static func loginUser(user: User) { //logs in the user
+        
+        let def = UserDefaults.standard
+        def.set(true, forKey: "is_authenticated") // save true flag to UserDefaults
+        
+        if user is AdminUser {
+            def.set(true, forKey: "isAdmin")
+            
+        }else if user is LabUser {
+            def.set(true, forKey: "isLabs")
+            
+        }else if user is PatientUser{
+            def.set(true, forKey: "isPatient")
+        }
+        def.synchronize()
+        
+    }
+    static func logoutUser() { //logs out the user
+        let defaults = UserDefaults.standard
+        
+        // Update the state by changing the values of specific keys
+        defaults.set(false, forKey: "is_authenticated")
+        defaults.set(false, forKey: "isAdmin")
+        defaults.set(false, forKey: "isLabs")
+        defaults.set(false, forKey: "isPatient")
+        
+        defaults.synchronize()
+        
+        // Remove any additional objects from user defaults
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            if key != "is_authenticated" && key != "isAdmin" && key != "isLabs" && key != "isPatient" {
+                defaults.removeObject(forKey: key)
+            }
+        }
+        
+        defaults.synchronize()
     }
     
 }
