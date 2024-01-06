@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LabUser: Encodable, Decodable{
+class LabUser: User, Encodable, Decodable{
     
     // Define properties of the PatientUser class
     var email:String
@@ -17,6 +17,11 @@ class LabUser: Encodable, Decodable{
     init(email: String, password: String) {
         self.email = email
         self.password = password
+        super.init()
+    }
+    
+    required init(from decoder: Decoder) throws {
+        fatalError("init(from:) has not been implemented")
     }
     
 }

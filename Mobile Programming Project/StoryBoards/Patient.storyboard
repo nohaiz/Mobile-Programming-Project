@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BFl-zV-D1A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JM1-Ho-Yny">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,7 +13,7 @@
         <!--Patient Home Page-->
         <scene sceneID="19Y-gh-f6c">
             <objects>
-                <viewController id="0eF-eW-OVg" customClass="patientHomePage" customModule="Mobile_Programming_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="patientHome" id="0eF-eW-OVg" customClass="patientHomePage" customModule="Mobile_Programming_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="con-BP-TpF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,14 +49,14 @@
                                                     <rect key="frame" x="20" y="6.0000000000000009" width="25" height="14.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <color key="textColor" name="textColor"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EsS-Yr-Mub">
                                                     <rect key="frame" x="19.999999999999996" y="22.333333333333336" width="32.666666666666664" height="14.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <color key="textColor" name="textColor"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -155,11 +155,12 @@
                     <connections>
                         <outlet property="tableView" destination="QIF-wE-idj" id="VDN-Xv-yJu"/>
                         <outlet property="upcomingLabView" destination="2Cw-tt-oSK" id="mKg-Ti-te3"/>
+                        <outlet property="userNameLabel" destination="Wt5-tW-Kb6" id="g6S-bZ-2TH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PMw-JD-YrG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904.5801526717557" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="3758.0152671755723" y="-35.211267605633807"/>
         </scene>
         <!--Settings-->
         <scene sceneID="aUu-BS-s4f">
@@ -413,7 +414,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="922-7J-jML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2843.5114503816794" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="4696.9465648854957" y="-35.211267605633807"/>
         </scene>
         <!--Privacy Policy-->
         <scene sceneID="xnC-MQ-qRV">
@@ -700,45 +701,43 @@ If you have any questions about this Policy, please contact us at 0097336620055.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEm-cc-2xm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3679" y="-35"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="HHk-bj-cIZ">
-            <objects>
-                <tabBarController storyboardIdentifier="patientNav" automaticallyAdjustsScrollViewInsets="NO" id="BFl-zV-D1A" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zbo-mF-Sk3">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <tabBarAppearance key="scrollEdgeAppearance"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="8lb-dz-NYW" kind="relationship" relationship="viewControllers" id="Bf1-aF-GG5"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bEq-4Q-b3d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="45" y="-35"/>
+            <point key="canvasLocation" x="5532.06106870229" y="-35.211267605633807"/>
         </scene>
         <!--Item-->
-        <scene sceneID="Cxc-K7-v3m">
+        <scene sceneID="uWm-gd-Nqz">
             <objects>
-                <navigationController storyboardIdentifier="patientStart" automaticallyAdjustsScrollViewInsets="NO" id="8lb-dz-NYW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="XmO-fj-XlG"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LCQ-qn-v6D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ZcT-e7-XbL"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yYc-4v-Jm0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yt5-su-PXK">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0eF-eW-OVg" kind="relationship" relationship="rootViewController" id="jht-tk-Rbm"/>
+                        <segue destination="0eF-eW-OVg" kind="relationship" relationship="rootViewController" id="Z9e-M6-86T"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j1F-d2-ceW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmH-Sb-jet" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977.86259541984725" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="2831.2977099236641" y="-35.211267605633807"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="eWe-pL-IUt">
+            <objects>
+                <tabBarController storyboardIdentifier="patientNav" automaticallyAdjustsScrollViewInsets="NO" id="JM1-Ho-Yny" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NMA-nb-myE">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="LCQ-qn-v6D" kind="relationship" relationship="viewControllers" id="rNl-EA-p8L"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PMP-ix-Hed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904.5801526717557" y="-35.211267605633807"/>
         </scene>
     </scenes>
     <resources>

@@ -85,12 +85,12 @@ class BookingTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         expirationDate.isUserInteractionEnabled = false
-        bookingDescLbl.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        bookingDescLbl.text = "At the American Mission Hospital, a vitamin C test is a routine diagnostic procedure employed to assess the levels of vitamin C in a patient's blood. This test is crucial in determining an individual's nutritional status and can aid in identifying potential deficiencies or excesses of vitamin C. The hospital utilizes state-of-the-art laboratory equipment and follows rigorous protocols to ensure accurate and reliable results. The vitamin C test plays a pivotal role in maintaining overall health, as this essential nutrient is known for its antioxidant properties and its role in supporting the immune system. The American Mission Hospital prioritizes precision and efficiency in conducting such tests, contributing to comprehensive patient care and well-being."
         bookingDescLbl.contentMode = .top
-        hospNameLbl.text = "llAmerican bubul7"
-        pTNameLbl.text = ";llBlood Workqyffytftuftu1112"
- 
-        
+        hospNameLbl.text = "American Mission Hospital"
+        pTNameLbl.text = "Vitamn C Test"
+        fastingPeriodLbl.text = "0"
+        bookingPriceLbl.text = "12 BHD"
 
 
         

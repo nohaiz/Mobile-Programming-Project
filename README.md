@@ -11,3 +11,24 @@ Nohaiz Sh 202000544 (Changes made)
 Features:
 Login Page (Nohaiz Sh) Setup: Need to have existing login
 Patient Registration Page (Nohaiz Sh) Setup: none
+
+<hr></hr>
+
+<h3>Ali Alfardan <i>202101456</i></h3>
+<h4>Features:</h4>
+<ol>
+<li>Settings Screen</li>
+<li>Home/Explore Screen</li>
+</ol>
+<h4>Changes:</h4>
+<ul>
+<li>Settings button in home page changed to settings icon for ease of use and readability of page.</li>
+<li>Settings page added to lab user page.</li>
+<li>Settings page shows normally (not modally).</li>
+<li>Increased text fields to match the user classes</li>
+</ul>
+<br>
+<br>
+<b>No Steup Needed</b>
+
+<hr>
