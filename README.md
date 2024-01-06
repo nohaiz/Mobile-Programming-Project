@@ -13,12 +13,9 @@
 <h4>Features:</h4>
 <ol>
 <li>Login Page</li>
- <br>
- Setup: Need to have existing login.
 <li>Patient Registration Page</li>
- <br>
- Setup: none.
 </ol>
+<b> Setup: Need to have existing login.</b>
 
 <hr></hr>
 
