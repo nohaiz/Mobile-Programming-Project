@@ -12,8 +12,12 @@
 </ol>
 <h4>Features:</h4>
 <ol>
-<li>Login Page (Nohaiz Sh) Setup: Need to have existing login.</li>
-<li>Patient Registration Page (Nohaiz Sh) Setup: none.</li>
+<li>Login Page</li>
+ <br>
+ Setup: Need to have existing login.
+<li>Patient Registration Page</li>
+ <br>
+ Setup: none.
 </ol>
 
 <hr></hr>
