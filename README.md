@@ -1,7 +1,7 @@
 # Mobile-Programming-Project
  
 <h3>Nohaiz Sh 202000544 </h3> 
-<h4>Changes made</h4>
+<h4>Changes:</h4>
 <ol>
 <li>The login button is not rounded as an oval shape in the final demo for the login page.</li>
 <li>The registration page has a back button instead of a login button on the top left of the page.</li>
@@ -15,7 +15,7 @@
 <li>Login Page</li>
 <li>Patient Registration Page</li>
 </ol>
-<b>Setup</b>
+<b>Setup:</b>
 <br>
 Need to have existing login credentials. 
 
