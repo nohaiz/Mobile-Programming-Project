@@ -51,7 +51,7 @@ Need to have existing login credentials if not create a new patient.
 </ol>
 <h4>Changes:</h4>
 <ul>
-<li>Implemented deleting tests from a packages.</li>
+<li>Implemented deleting tests from a package.</li>
 <li>Editing or deleting a test will also make the same change in all packages where it's included.</li>
 <li>Save button in the form will be greyed out if the three textboxes are empty or if the price is not a number.</li>
 <li>Added variables to store initial values and a function to check if any data was changed, alerts for saving and discarding changes will appear accordingly.</li>
@@ -61,6 +61,29 @@ Need to have existing login credentials if not create a new patient.
 Lab user credentials:<br>
 Email : labuser1@gmail.com<br>
 Password : gnskeqn1<br>
+<br>
+<b>No Set-up Needed</b>
+
+<hr>
+
+<h3>Mohamed Hasan Alaam - 202102594</h3>
+<h4>Features:</h4>
+<ol>
+<li>Add/Edit facilities.</li>
+<li>View/Delete facilities.</li>
+</ol>
+<h4>Changes:</h4>
+<ul>
+<li>Implemented facilities management (viewing, adding, deleting, or editing facilities)</li>
+<li>User input validation and alerts.</li>
+<li>Data presistance to remember the facilities and any changes done when reopening the app.</li>
+<li>Uploaded logos locally to show how they would appear.</li>
+<li>Reverted firebase, was able to upload images to the firebase but cannot properly retrieve them or use them.</li>
+</ul>
+<br>
+Admin user credentials:<br>
+Email : adminuser1@gmail.com<br>
+Password : vndosjt9<br>
 <br>
 <b>No Set-up Needed</b>
 
