@@ -30,7 +30,6 @@ Need to have existing login credentials if not create a new patient.
 <h4>Changes:</h4>
 <ul>
 <li>Settings button in home page changed to settings icon for ease of use and readability of page.</li>
-<li>Settings page added to lab user page.</li>
 <li>Settings page shows normally (not modally).</li>
 <li>Increased text fields to match the user classes</li>
 </ul>
