@@ -104,6 +104,6 @@ Password : vndosjt9<br>
 <br>
 
 <br>
-<b>No Set-up Needed</b>
+<b>Change launchscreen</b>
 
 <hr>
