@@ -11,6 +11,8 @@
 		41225F502B479E6000E285E7 /* patientSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41225F4F2B479E6000E285E7 /* patientSettings.swift */; };
 		4194FDBC2B47E5E900FFE6AA /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194FDBB2B47E5E800FFE6AA /* functions.swift */; };
 		4194FDBE2B4853FB00FFE6AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194FDBD2B4853FB00FFE6AA /* User.swift */; };
+		4194FDC02B49CC5300FFE6AA /* homePageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194FDBF2B49CC5300FFE6AA /* homePageServices.swift */; };
+		4194FDC22B49FF6B00FFE6AA /* LabDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194FDC12B49FF6A00FFE6AA /* LabDetailsViewController.swift */; };
 		C7B444092B488DBB001A7AD9 /* FacilityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B444082B488DBB001A7AD9 /* FacilityTableViewController.swift */; };
 		C7B4440B2B488DEF001A7AD9 /* FacilityFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4440A2B488DEF001A7AD9 /* FacilityFormTableViewController.swift */; };
 		C7B4440D2B488E26001A7AD9 /* FacilityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4440C2B488E26001A7AD9 /* FacilityTableViewCell.swift */; };
@@ -51,6 +53,8 @@
 		41225F4F2B479E6000E285E7 /* patientSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientSettings.swift; sourceTree = "<group>"; };
 		4194FDBB2B47E5E800FFE6AA /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		4194FDBD2B4853FB00FFE6AA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4194FDBF2B49CC5300FFE6AA /* homePageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePageServices.swift; sourceTree = "<group>"; };
+		4194FDC12B49FF6A00FFE6AA /* LabDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDetailsViewController.swift; sourceTree = "<group>"; };
 		C7B444082B488DBB001A7AD9 /* FacilityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityTableViewController.swift; sourceTree = "<group>"; };
 		C7B4440A2B488DEF001A7AD9 /* FacilityFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityFormTableViewController.swift; sourceTree = "<group>"; };
 		C7B4440C2B488E26001A7AD9 /* FacilityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityTableViewCell.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 				C7D2ED422B47CF790045B422 /* ViewTestsTableViewController.swift */,
 				C7B444082B488DBB001A7AD9 /* FacilityTableViewController.swift */,
 				C7B4440A2B488DEF001A7AD9 /* FacilityFormTableViewController.swift */,
+				4194FDC12B49FF6A00FFE6AA /* LabDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				C7D2ED3A2B47CE4E0045B422 /* PackageAndTest.swift */,
 				C7B4440E2B488E58001A7AD9 /* Facility.swift */,
 				4194FDBD2B4853FB00FFE6AA /* User.swift */,
+				4194FDBF2B49CC5300FFE6AA /* homePageServices.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,10 +289,12 @@
 				E42B1FBC2B321AB0000F6370 /* Keys.swift in Sources */,
 				F0280ECD2B46D396002238D3 /* BookingHistoryViewController.swift in Sources */,
 				F0280EC72B46D38C002238D3 /* BookingHistory.swift in Sources */,
+				4194FDC02B49CC5300FFE6AA /* homePageServices.swift in Sources */,
 				C7B4440B2B488DEF001A7AD9 /* FacilityFormTableViewController.swift in Sources */,
 				C7D2ED3F2B47CF480045B422 /* ServiceTableViewController.swift in Sources */,
 				C7D2ED412B47CF5B0045B422 /* ServiceFormTableViewController.swift in Sources */,
 				E4DD60042B2858BC00694A69 /* LabUser.swift in Sources */,
+				4194FDC22B49FF6B00FFE6AA /* LabDetailsViewController.swift in Sources */,
 				C7B4440F2B488E58001A7AD9 /* Facility.swift in Sources */,
 				E4DD5FEA2B284D9A00694A69 /* AppDelegate.swift in Sources */,
 				E4DD600D2B285B8300694A69 /* AppData.swift in Sources */,

@@ -76,17 +76,19 @@ class LoginTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       if segue.identifier == "unwindToTabBarController" {
-           let tabBarController = segue.destination as! UITabBarController
-           // You can access your HomePage here if needed
-           // let homePage = tabBarController.viewControllers?.first as! HomePage
-       }
+        if segue.identifier == "segueRef" {
+           let navigationController = segue.destination as! UINavigationController
+           let tabBarController = UITabBarController()
+           // Set up your tabBarController here
+           navigationController.viewControllers = [tabBarController]
+        }
+
     }
 
     
     func performPatientSegue(user: PatientUser) {
         let storyboard = UIStoryboard(name: "Patient", bundle: nil)
-        if let patientVC = storyboard.instantiateViewController(withIdentifier: "patientHome") as? patientHomePage {
+        if let patientVC = storyboard.instantiateViewController(withIdentifier: "patientNav") as? patientHomePage {
             patientVC.user = user
             self.present(patientVC, animated: true, completion: nil)
         }

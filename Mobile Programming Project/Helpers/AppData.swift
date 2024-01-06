@@ -7,6 +7,7 @@
 import Foundation
 
 class AppData {
+    static var patientServices: [Services] = []
     static var services: [Service] = []
     static var facilities = [Facility]()
 
@@ -56,7 +57,33 @@ class AppData {
 
         ]
     
-    
+    static func addSampleServices() {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+
+        let servicesToAdd = [
+           Services(name: "Complete Blood Count (CBC)", price: 12.0, description: "Full blood count test including WBC, RBC, Hemoglobin.", isFastingRequired: false, isPromoted: true, isRecent: true, popularityScore: 95, date: dateFormatter.date(from: "2024/01/01")!, hospitalName: "King Hamad Medical City"),
+           Services(name: "Lipid Profile", price: 15.0, description: "Measures cholesterol levels in the blood.", isFastingRequired: true, isPromoted: false, isRecent: true, popularityScore: 80, date: dateFormatter.date(from: "2024/01/02")!, hospitalName: "Salmaniya Medical Complex"),
+           Services(name: "Thyroid Function Test", price: 18.0, description: "Tests for T3, T4, and TSH hormones.", isFastingRequired: false, isPromoted: false, isRecent: true, popularityScore: 85, date: dateFormatter.date(from: "2024/01/03")!, hospitalName: "Al Qudsi Hospital"),
+           Services(name: "Liver Function Test", price: 20.0, description: "Analyzes enzymes and proteins related to liver function.", isFastingRequired: true, isPromoted: false, isRecent: true, popularityScore: 75, date: dateFormatter.date(from: "2024/01/04")!, hospitalName: "Bahrain Specialist Hospital"),
+           Services(name: "Renal Function Panel", price: 22.0, description: "Assesses kidney function and electrolyte levels.", isFastingRequired: true, isPromoted: false, isRecent: true, popularityScore: 70, date: dateFormatter.date(from: "2024/01/05")!, hospitalName: "The Bahrain Clinic"),
+           Services(name: "Hemoglobin A1c", price: 25.0, description: "Provides average level of blood sugar over the past 3 months.", isFastingRequired: false, isPromoted: false, isRecent: true, popularityScore: 90, date: dateFormatter.date(from: "2024/01/06")!, hospitalName: "Al Noor Hospital"),
+           Services(name: "Vitamin D Test", price: 28.0, description: "Measures the level of Vitamin D in the blood.", isFastingRequired: false, isPromoted: true, isRecent: true, popularityScore: 88, date: dateFormatter.date(from: "2024/01/07")!, hospitalName: "Dr. Sulaiman Al Habib Hospital"),
+           Services(name: "Prostate-Specific Antigen (PSA)", price: 30.0, description: "Screening for prostate cancer in men.", isFastingRequired: false, isPromoted: false, isRecent: true, popularityScore: 65, date: dateFormatter.date(from: "2024/01/08")!, hospitalName: "Bahrain Heart Institute"),
+           Services(name: "Electrolyte Panel", price: 15.0, description: "Measures electrolytes such as sodium, potassium.", isFastingRequired: false, isPromoted: false, isRecent: true, popularityScore: 78, date: dateFormatter.date(from: "2024/01/09")!, hospitalName: "Bahrain Eye Hospital"),
+           Services(name: "Bone Density Scan", price: 50.0, description: "Assesses bone health and risk of fractures.", isFastingRequired: false, isPromoted: false, isRecent: true, popularityScore: 60, date: dateFormatter.date(from: "2024/01/10")!, hospitalName: "Bahrain Heart Institute"),
+           Services(name: "Allergy Testing", price: 40.0, description: "Identifies specific allergens causing allergies.", isFastingRequired: false, isPromoted: false, isRecent: true, popularityScore: 82, date: dateFormatter.date(from: "2024/01/11")!, hospitalName: "Al Maktoum Hospital"),
+           Services(name: "Echocardiogram", price: 100.0, description: "Ultrasound of the heart to assess its function and structure.", isFastingRequired: false, isPromoted: false, isRecent: true, popularityScore: 77, date: dateFormatter.date(from: "2024/01/12")!, hospitalName: "Bahrain Eye Hospital"),
+           Services(name: "Mammography", price: 55.0, description: "X-ray imaging of the breast for cancer screening.", isFastingRequired: false, isPromoted: true, isRecent: true, popularityScore: 69, date: dateFormatter.date(from: "2024/01/13")!, hospitalName: "Dr. Sulaiman Al Habib")
+        ]
+
+
+           for service in servicesToAdd {
+               patientServices.append(service)
+           }
+           saveToFile()
+       }
 }
 
 
@@ -89,6 +116,11 @@ extension AppData{
 
     static func addService(service: Service){
         services.append(service)
+        saveToFile()
+    }
+    
+    static func addService(service: Services){
+        patientServices.append(service)
         saveToFile()
     }
 
