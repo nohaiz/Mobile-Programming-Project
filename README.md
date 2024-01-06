@@ -1,16 +1,20 @@
 # Mobile-Programming-Project
  
-<h3>Nohaiz Sh 202000544 </h3> (Changes made)
--The login button is not rounded as an oval shape in the final demo for the login page.
--The registration page has a back button instead of a login button on the top left of the page.
--The textfields in the registration page have unique alerts based on what is required in the textfields.
--The gender button changes itself and displays according to what gender is selected.
--The date pickers desgin was slightly modified to only have a done button after completion.
--The done button in the registration page will only work if all the information is present and will change from grey to blue and not before that.
-
-Features:
-Login Page (Nohaiz Sh) Setup: Need to have existing login
-Patient Registration Page (Nohaiz Sh) Setup: none
+<h3>Nohaiz Sh 202000544 </h3> 
+<h4>Changes made</h4>
+<ol>
+<li>The login button is not rounded as an oval shape in the final demo for the login page.</li>
+<li>The registration page has a back button instead of a login button on the top left of the page.</li>
+<li>The textfields in the registration page have unique alerts based on what is required in the textfields.</li>
+<li>The gender button changes itself and displays according to what gender is selected.</li>
+<li>The date pickers desgin was slightly modified to only have a done button after completion.</li>
+<li>The done button in the registration page will only work if all the information is present and will change from grey to blue and not before that.</li>
+</ol>
+<h4>Features:</h4>
+<ol>
+<li>Login Page (Nohaiz Sh) Setup: Need to have existing login.</li>
+<li>Patient Registration Page (Nohaiz Sh) Setup: none.</li>
+</ol>
 
 <hr></hr>
 
