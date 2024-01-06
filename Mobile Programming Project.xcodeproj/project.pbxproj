@@ -10,11 +10,11 @@
 		41225F4E2B479E4700E285E7 /* patientHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41225F4D2B479E4700E285E7 /* patientHomePage.swift */; };
 		41225F502B479E6000E285E7 /* patientSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41225F4F2B479E6000E285E7 /* patientSettings.swift */; };
 		4194FDBC2B47E5E900FFE6AA /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194FDBB2B47E5E800FFE6AA /* functions.swift */; };
+		4194FDBE2B4853FB00FFE6AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194FDBD2B4853FB00FFE6AA /* User.swift */; };
 		C7B444092B488DBB001A7AD9 /* FacilityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B444082B488DBB001A7AD9 /* FacilityTableViewController.swift */; };
 		C7B4440B2B488DEF001A7AD9 /* FacilityFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4440A2B488DEF001A7AD9 /* FacilityFormTableViewController.swift */; };
 		C7B4440D2B488E26001A7AD9 /* FacilityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4440C2B488E26001A7AD9 /* FacilityTableViewCell.swift */; };
 		C7B4440F2B488E58001A7AD9 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4440E2B488E58001A7AD9 /* Facility.swift */; };
-		4194FDBE2B4853FB00FFE6AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194FDBD2B4853FB00FFE6AA /* User.swift */; };
 		C7D2ED392B47CE330045B422 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D2ED382B47CE330045B422 /* Service.swift */; };
 		C7D2ED3B2B47CE4E0045B422 /* PackageAndTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D2ED3A2B47CE4E0045B422 /* PackageAndTest.swift */; };
 		C7D2ED3D2B47CF1C0045B422 /* AddTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D2ED3C2B47CF1C0045B422 /* AddTestTableViewController.swift */; };
@@ -22,7 +22,6 @@
 		C7D2ED412B47CF5B0045B422 /* ServiceFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D2ED402B47CF5B0045B422 /* ServiceFormTableViewController.swift */; };
 		C7D2ED432B47CF790045B422 /* ViewTestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D2ED422B47CF790045B422 /* ViewTestsTableViewController.swift */; };
 		C7D2ED452B47D21A0045B422 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D2ED442B47D21A0045B422 /* ServiceTableViewCell.swift */; };
-		E429D6062B34DB3F0048BF16 /* Patient&Admin&LabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429D6052B34DB3F0048BF16 /* Patient&Admin&LabViewController.swift */; };
 		E42B1FBC2B321AB0000F6370 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1FBB2B321AB0000F6370 /* Keys.swift */; };
 		E4DD5FEA2B284D9A00694A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DD5FE92B284D9A00694A69 /* AppDelegate.swift */; };
 		E4DD5FEC2B284D9A00694A69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DD5FEB2B284D9A00694A69 /* SceneDelegate.swift */; };
@@ -51,11 +50,11 @@
 		41225F4D2B479E4700E285E7 /* patientHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientHomePage.swift; sourceTree = "<group>"; };
 		41225F4F2B479E6000E285E7 /* patientSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientSettings.swift; sourceTree = "<group>"; };
 		4194FDBB2B47E5E800FFE6AA /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
+		4194FDBD2B4853FB00FFE6AA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C7B444082B488DBB001A7AD9 /* FacilityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityTableViewController.swift; sourceTree = "<group>"; };
 		C7B4440A2B488DEF001A7AD9 /* FacilityFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityFormTableViewController.swift; sourceTree = "<group>"; };
 		C7B4440C2B488E26001A7AD9 /* FacilityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityTableViewCell.swift; sourceTree = "<group>"; };
 		C7B4440E2B488E58001A7AD9 /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
-		4194FDBD2B4853FB00FFE6AA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C7D2ED382B47CE330045B422 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		C7D2ED3A2B47CE4E0045B422 /* PackageAndTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageAndTest.swift; sourceTree = "<group>"; };
 		C7D2ED3C2B47CF1C0045B422 /* AddTestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTestTableViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +62,6 @@
 		C7D2ED402B47CF5B0045B422 /* ServiceFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFormTableViewController.swift; sourceTree = "<group>"; };
 		C7D2ED422B47CF790045B422 /* ViewTestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTestsTableViewController.swift; sourceTree = "<group>"; };
 		C7D2ED442B47D21A0045B422 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
-		E429D6052B34DB3F0048BF16 /* Patient&Admin&LabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Patient&Admin&LabViewController.swift"; sourceTree = "<group>"; };
 		E42B1FBB2B321AB0000F6370 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		E4DD5FE62B284D9A00694A69 /* Mobile Programming Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Programming Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DD5FE92B284D9A00694A69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 		E4DD5FFE2B28585300694A69 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E429D6052B34DB3F0048BF16 /* Patient&Admin&LabViewController.swift */,
 				C7D2ED442B47D21A0045B422 /* ServiceTableViewCell.swift */,
 				C7B4440C2B488E26001A7AD9 /* FacilityTableViewCell.swift */,
 			);
@@ -279,7 +276,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DD60062B28595C00694A69 /* PatientUser.swift in Sources */,
-				E429D6062B34DB3F0048BF16 /* Patient&Admin&LabViewController.swift in Sources */,
 				C7D2ED452B47D21A0045B422 /* ServiceTableViewCell.swift in Sources */,
 				C7D2ED432B47CF790045B422 /* ViewTestsTableViewController.swift in Sources */,
 				C7D2ED3D2B47CF1C0045B422 /* AddTestTableViewController.swift in Sources */,

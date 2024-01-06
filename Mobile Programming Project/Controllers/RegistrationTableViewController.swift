@@ -118,7 +118,7 @@ class RegistrationTableViewController: UITableViewController {
                         AppData.sampleDataPatient.append(newPatient)
                         AppData.saveToFile()
                         // Perform segue to login page
-                        performSegue(withIdentifier: "loginPage", sender: Any?.self)
+                        goToStoryboard(storyboardName: "Main", identifier: "mainNav")
                     }
                 }
                 else {

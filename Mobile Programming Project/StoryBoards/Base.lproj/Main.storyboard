@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eEp-6l-7bg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eEp-6l-7bg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -151,47 +150,12 @@
                     <connections>
                         <outlet property="passwordTextfield" destination="HQd-3j-l0z" id="Nhj-c9-oNH"/>
                         <outlet property="usernameTextfield" destination="DFS-Yr-u82" id="mzO-c2-n6B"/>
-                        <segue destination="hrg-6s-RCh" kind="show" identifier="adminPage" id="Tef-Xy-rWx"/>
-                        <segue destination="W38-dH-iDl" kind="show" identifier="labPage" id="VwG-J6-wTv"/>
-                        <segue destination="5Nr-Bz-XjL" kind="show" identifier="patientPage" id="Ggr-ff-HKf"/>
                         <segue destination="bUG-Ls-Tre" kind="show" identifier="segueRef" id="d7Q-cg-eVh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GnR-dO-yvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1870.9923664122136" y="12.67605633802817"/>
-        </scene>
-        <!--Patient Admin Lab View Controller-->
-        <scene sceneID="Nw9-H8-EOa">
-            <objects>
-                <viewController id="hrg-6s-RCh" customClass="Patient_Admin_LabViewController" customModule="Mobile_Programming_Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PMT-vz-M2K">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unP-xC-ud9">
-                                <rect key="frame" x="50" y="153" width="293" height="615"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="8aK-XY-8pj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="8aK-XY-8pj" firstAttribute="trailing" secondItem="unP-xC-ud9" secondAttribute="trailing" constant="50" id="OWI-6N-p2C"/>
-                            <constraint firstItem="unP-xC-ud9" firstAttribute="leading" secondItem="8aK-XY-8pj" secondAttribute="leading" constant="50" id="QGV-4O-Q0k"/>
-                            <constraint firstItem="unP-xC-ud9" firstAttribute="top" secondItem="8aK-XY-8pj" secondAttribute="top" constant="50" id="cSJ-9C-nDR"/>
-                            <constraint firstItem="8aK-XY-8pj" firstAttribute="bottom" secondItem="unP-xC-ud9" secondAttribute="bottom" constant="50" id="hba-C3-TMo"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="quJ-cE-EWB">
-                        <barButtonItem key="backBarButtonItem" title="Log out" id="fRn-Lv-fdU"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zpz-lN-qgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1170" y="801"/>
         </scene>
         <!--Registration Form-->
         <scene sceneID="Zyh-fa-ZGQ">
@@ -505,7 +469,6 @@
                         <outlet property="genderBtn" destination="GZZ-Zc-aLe" id="KNH-da-DSE"/>
                         <outlet property="passwordTextfield" destination="czM-TY-t3S" id="y96-Nv-gXO"/>
                         <outlet property="saveBtn" destination="F0P-N8-rAW" id="YYk-RA-Zr7"/>
-                        <segue destination="Tdo-Cw-ZUw" kind="show" identifier="loginPage" id="UeK-xE-qdk"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4sN-hZ-bzk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -520,7 +483,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLq-HM-IJ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3434" y="413"/>
+            <point key="canvasLocation" x="1871" y="526"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oYB-iZ-vOJ">
@@ -540,74 +503,7 @@
             </objects>
             <point key="canvasLocation" x="944.27480916030527" y="12.67605633802817"/>
         </scene>
-        <!--Patient Admin Lab View Controller-->
-        <scene sceneID="BfB-lO-SaJ">
-            <objects>
-                <viewController id="W38-dH-iDl" customClass="Patient_Admin_LabViewController" customModule="Mobile_Programming_Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Bu6-VF-2jb">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lab" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yt-KW-gdg">
-                                <rect key="frame" x="50" y="153" width="293" height="615"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="UDW-tk-kxN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="2Yt-KW-gdg" firstAttribute="leading" secondItem="UDW-tk-kxN" secondAttribute="leading" constant="50" id="0YD-P2-VcP"/>
-                            <constraint firstItem="UDW-tk-kxN" firstAttribute="trailing" secondItem="2Yt-KW-gdg" secondAttribute="trailing" constant="50" id="HCF-9c-Nqy"/>
-                            <constraint firstItem="UDW-tk-kxN" firstAttribute="bottom" secondItem="2Yt-KW-gdg" secondAttribute="bottom" constant="50" id="Z8s-LJ-oOy"/>
-                            <constraint firstItem="2Yt-KW-gdg" firstAttribute="top" secondItem="UDW-tk-kxN" secondAttribute="top" constant="50" id="eq8-Br-GQi"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="a3l-Ax-FIM">
-                        <barButtonItem key="backBarButtonItem" title="Log out" id="GlA-HS-Agq"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sX1-Ql-kQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1871" y="801"/>
-        </scene>
-        <!--Patient Admin Lab View Controller-->
-        <scene sceneID="ov1-pP-uNB">
-            <objects>
-                <viewController id="5Nr-Bz-XjL" customClass="Patient_Admin_LabViewController" customModule="Mobile_Programming_Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Gdu-Bk-Oxi">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdw-VF-t0J">
-                                <rect key="frame" x="50" y="153" width="293" height="615"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Xl9-6K-kew"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Xdw-VF-t0J" firstAttribute="top" secondItem="Xl9-6K-kew" secondAttribute="top" constant="50" id="4NP-gI-eAU"/>
-                            <constraint firstItem="Xl9-6K-kew" firstAttribute="trailing" secondItem="Xdw-VF-t0J" secondAttribute="trailing" constant="50" id="Arx-hh-zbc"/>
-                            <constraint firstItem="Xdw-VF-t0J" firstAttribute="leading" secondItem="Xl9-6K-kew" secondAttribute="leading" constant="50" id="KHo-d1-L6O"/>
-                            <constraint firstItem="Xl9-6K-kew" firstAttribute="bottom" secondItem="Xdw-VF-t0J" secondAttribute="bottom" constant="50" id="iN8-R5-p1C"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="PVt-pL-Or1">
-                        <barButtonItem key="backBarButtonItem" title="Log out" id="4x3-pg-IwX"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="czK-lu-PAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2576" y="801"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="i9s-8C-mnN"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Medical Lab Finder-3" width="500" height="500"/>
         <image name="arrow.up.arrow.down" catalog="system" width="128" height="97"/>
@@ -618,13 +514,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
