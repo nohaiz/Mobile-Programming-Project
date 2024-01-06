@@ -17,7 +17,7 @@
 </ol>
 <b>Setup:</b>
 <br>
-Need to have existing login credentials. 
+Need to have existing login credentials if not create a new patient. 
 
 <hr></hr>
 
